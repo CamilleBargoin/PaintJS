@@ -77,7 +77,8 @@ window.addEventListener("load", function() {
 
     context = myCanvas.getContext('2d');
     context.strokeStyle = "white";
-    context.rect(0, 0, myCanvas.width, myCanvas.height);
+    context.fillStyle = "white";
+    context.fillRect(0, 0, myCanvas.width, myCanvas.height);
     context.stroke();
 
 
@@ -106,7 +107,7 @@ window.addEventListener("load", function() {
 
 
     window.document.getElementById("downloadLnk").addEventListener('click', function() {
-        var dt = myCanvas.toDataURL('image/jpeg');
+        var dt = myCanvas.toDataURL('image/png');
         this.href = dt;
     }, false);
 });
